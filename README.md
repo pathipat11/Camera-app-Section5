@@ -1,17 +1,16 @@
 # 📸 Camera-app-Section5
 
-A modern and interactive camera app built using **React Native** and **Expo**. This app allows users to take photos, save them to the media library, and view the latest photos in a gallery with a sleek and responsive UI.
+A modern camera application built using **React Native** and **Expo** with **TypeScript**. This app allows users to take photos, view the latest photo as a thumbnail, save images to the media library, and browse recent photos in a gallery with a sleek UI.
 
 ## ✨ Features
 
-* 📷 **Camera Functionality** with front and back camera support
-* ⚡ **Flash Toggle** for on/off flash control
-* 🖼️ **Gallery Modal** displaying the 50 most recent photos
-* 🖌️ **Modern UI** with shadows and gradients for buttons
-* 🖱️ **Thumbnail Preview** of the latest captured photo
-* 💾 **Save Photos** directly to the device gallery
-* 🔄 **Retake Photo** option after capture
-* 📱 **Mobile Optimized** layout for various screen sizes
+* 📷 **Take Photos** using front or back camera
+* 🔦 **Flash Control**: On / Off
+* 🖼️ **Thumbnail Preview** of the latest photo
+* 🖌️ **Gallery View**: Display up to 50 recent photos
+* 💾 **Save to Media Library** instantly
+* 🌗 **Modern UI** with rounded buttons, shadows, and gradient effects
+* 📱 **Mobile Responsive** optimized for smartphones
 
 ## 🎬 Demo Video
 
@@ -25,10 +24,11 @@ Here is a quick GIF showing the app's interface and interactions:
 
 * React Native
 * Expo
-* Expo Camera
-* Expo Media Library
+* TypeScript
+* Expo Camera (`expo-camera`)
+* Expo Media Library (`expo-media-library`)
 * React Native Vector Icons
-* Animated API
+* Animated API for button effects
 
 ## 🚀 Getting Started
 
@@ -37,11 +37,24 @@ Here is a quick GIF showing the app's interface and interactions:
 * Node.js
 * Expo CLI (`npm install -g expo-cli`)
 
-### Installation
+### Create Project
+
+Create a new Expo project using the **blank TypeScript template**:
 
 ```bash
-npm install
+npx create-expo-app@latest camera-app --template blank-typescript
 ```
+
+### Install Required Libraries
+
+To access the camera and media library, install:
+
+```bash
+cd camera-app
+npx expo install expo-camera expo-media-library
+```
+
+> Using `npx expo install` ensures compatibility with your Expo SDK version.
 
 ### Running the App
 
@@ -54,24 +67,16 @@ Then scan the QR code with **Expo Go** or use an emulator.
 ## 🔄 Project Structure
 
 ```
-Camera-app-Section5/
-├── App.tsx                  # Main app file with camera and gallery logic
-├── components/              # Reusable UI components (if any)
+camera-app/
+├── app/                      # Screens (if using Expo Router)
 ├── assets/
-│   ├── image/               # Placeholder for photos or demo images
-│   └── video/               # Demo GIFs
+│   └── video/
+│       └── camera-app.gif    # Demo GIF
+├── components/               # Optional UI components
+├── App.tsx                   # Main App file
 ├── package.json
 └── README.md
 ```
-
-## 🦠 Demo Highlights
-
-* 🔄 Real-time preview of captured photos
-* 👤 Thumbnail shows the latest photo from gallery
-* 🎨 Modern button design with gradient and shadow effects
-* 🖼️ FlatList gallery with multiple columns
-* 📱 Fully responsive UI
-* 💾 Direct save to media library
 
 ## 👤 Author
 
